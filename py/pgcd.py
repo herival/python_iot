@@ -6,11 +6,20 @@
 # fonction convertisseur devises
 
 def pgcd(a, b):
-    if b > 0:
-        reste = a % b
-        return pgcd(b, reste)
+
+    reste = a%b
+
+    if reste == 0:
+        return b
     else:
-        return a
+        return pgcd(b, reste)
 
+print(pgcd(4, 8))
 
-print(pgcd(64, 38))
+# Correction
+
+def pgcd2(p,q):
+    if not p%q:
+        return q
+    else :
+        return (pgcd2(q,p%q))
