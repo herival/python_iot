@@ -30,22 +30,30 @@ def dernier(a):
 def test(a):
     return vide(a)
 
-compteur = 0
 def cardinal(a):
     if vide(a):
         return 0
     else:
-        compteur += 1
-        if vide(reste(a)):
-            return compteur
-        else:
-            cardinal(reste(a))
+        return 1 + cardinal(reste(a)) # on peut incrementer sans créer de variable
 
+def appartient(element, liste):
+    if vide(liste):
+        return False
+    else:
+        if element == prem(liste):
+            return True
+        else:
+            return appartient(element, reste(liste))
+
+def appartient_in(element, liste):  #maniere simple
+    return element in liste
 
 liste = ["premier", "deuxième", "troisième", 'quatrième', 'cinquième']
 
 print(deuxieme(liste))
 print(troisieme(liste))
 print(dernier(liste))
+print(appartient("premie", liste))
+print(appartient_in("quatrième", liste))
 
 print(cardinal(liste))
