@@ -1,14 +1,20 @@
 # nombre premier inférieur à N
 
-a = list(range(0, 100))
-
 
 def premier(N):
-    liste = list(range(11, N))
-
-    for i in range(11, 100):
-        if i % 2 == 0 or i % 3 == 0 or i % 5 == 0 or i % 7 == 0:
+    liste = list(range(2, N))
+    liste2= list(range(2,N))
+    for i in range(2, N):
+        # if i % 2 == 0 or i % 3 == 0 or i % 5 == 0 or i % 7 == 0 or i%11 == 0, or i%13==0 :
+        if i % 2 == 0:
             liste.remove(i)
+    for i in liste:
+        a = 0
+        for ==0:
+            liste.remove
+
+
+            
 
     # for j in range(101, N):
     #     for i in liste:
