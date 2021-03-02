@@ -10,8 +10,8 @@ def fib_i(N):
         return 1
     for i in range(N-2):
         z = x+y
-        x = y
-        y = z
+        (x, y) = (y, z)
+
     return z
 
 

@@ -1,3 +1,6 @@
+import collections
+
+
 def fib_gen():
     (a, b) = (0, 1)
     while True:
