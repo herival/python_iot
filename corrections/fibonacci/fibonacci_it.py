@@ -1,14 +1,20 @@
 # iterative
 
-def fib_i(n):
-    liste = []
-    for i in range(n):
-        if n > 1: 
-            liste.append(n + (n-1))
-            return liste
-    return 0
+def fib_i(N):
+    x = 1
+    y = 1
+    z = 0
+    if N == 0:
+        return 0
+    elif N <= 2:
+        return 1
+    for i in range(N-2):
+        z = x+y
+        x = y
+        y = z
+    return z
 
-print(fib_i(10))
-# for i in range(10):   
-#     print(fib_r(i))
 
+# print(fib_i(10))
+for i in range(11):
+    print(fib_i(i))
